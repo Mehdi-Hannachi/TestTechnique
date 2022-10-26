@@ -9,6 +9,7 @@ app.use(express.json());
 // connect data base
 connectDB();
 
+//deploy script
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
   app.get("*", (req, res) => {
