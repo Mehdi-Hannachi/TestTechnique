@@ -11,10 +11,10 @@ const App = () => {
 
   useEffect(() => {
     dispatch(getAllPokemons());
-  }, []);
+  }, [dispatch]);
 
   return (
-    <div >
+    <div>
       <Home />
     </div>
   );
