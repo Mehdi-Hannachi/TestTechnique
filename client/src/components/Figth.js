@@ -61,9 +61,11 @@ const Figth = () => {
                     option.children.toLowerCase().includes(input.toLowerCase())
                   }
                 >
-                  {pokemons.map((el, i) => (
-                    <Option value={el.name}>{el.name}</Option>
-                  ))}
+                  {pokemons &&
+                    pokemons.length > 0 &&
+                    pokemons.map((el, i) => (
+                      <Option value={el.name}>{el.name}</Option>
+                    ))}
                 </Select>
               </Form.Item>
               <Form.Item>

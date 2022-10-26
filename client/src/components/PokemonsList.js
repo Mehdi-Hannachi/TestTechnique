@@ -24,7 +24,9 @@ const PokemonsList = ({ filterText, label }) => {
       <Divider orientation="left">Pokemons</Divider>
       <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
         {label == "All"
-          ? pokemons_list
+          ? pokemons_list &&
+            pokemons_list.length > 0 &&
+            pokemons_list
               .filter((el) =>
                 el.name.toUpperCase().includes(filterText.toUpperCase())
               )
@@ -40,7 +42,9 @@ const PokemonsList = ({ filterText, label }) => {
                   />
                 </Col>
               ))
-          : pokemons_list
+          : pokemons_list &&
+            pokemons_list.length > 0 &&
+            pokemons_list
               .filter(
                 (el) =>
                   el.name.toUpperCase().includes(filterText.toUpperCase()) &&
