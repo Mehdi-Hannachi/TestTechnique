@@ -6,6 +6,7 @@ const {
   fetchPokemonByName,
   fetchPokemonsWeakTo,
   fetchPokemonsStrongTo,
+  fetchPokemonsByType,
 } = require("../controllers/pokemons-controller");
 
 //  http://localhost:5005/pokemons

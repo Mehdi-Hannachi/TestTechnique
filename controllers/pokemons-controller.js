@@ -28,7 +28,9 @@ exports.fetchPokemonsWeakTo = async (req, res) => {
     const result = await pokemons.filter((pokemon) =>
       pokemon.weaknesses.find((el) => el == req.params.typeName)
     );
-    res.status(200).json({ msg: "Fetch pokemons with success", result });
+    res
+      .status(200)
+      .json({ msg: "Fetch pokemons with success", pokemons: result });
   } catch (error) {
     res.status(400).json({ errors: [{ msg: "Fetch pokemons failed" }] });
   }
@@ -40,7 +42,9 @@ exports.fetchPokemonsStrongTo = async (req, res) => {
     const result = await pokemons.filter((pokemon) =>
       pokemon.type.find((el) => el == req.params.typeName)
     );
-    res.status(200).json({ msg: "Fetch pokemons with success", result });
+    res
+      .status(200)
+      .json({ msg: "Fetch pokemons with success", pokemons: result });
   } catch (error) {
     res.status(400).json({ errors: [{ msg: "Fetch pokemons failed" }] });
   }
@@ -54,5 +58,3 @@ exports.fetchPokemonByName = async (req, res) => {
     res.status(400).json({ msg: "Fetch pokemon failed" });
   }
 };
-
-
