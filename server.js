@@ -2,9 +2,11 @@ require("dotenv").config({ path: "./config/.env" });
 const pokemons = require("./routes/pokemons");
 const express = require("express");
 const connectDB = require("./config/connectDB");
+const cors = require("cors");
 const app = express();
 //parse date
 app.use(express.json());
+app.use(cors());
 
 // connect data base
 connectDB();
