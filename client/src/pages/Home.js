@@ -6,12 +6,10 @@ import { useDispatch } from "react-redux";
 import Figth from "../components/Figth";
 import Filter from "../components/Filter";
 import PokemonsList from "../components/PokemonsList";
-import { getPokemonsStrongTo } from "../JS/actions/pokemonsActions";
 const { Header } = Layout;
 
 const Home = () => {
   const [filterText, setFilterText] = useState("");
-  const dispatch = useDispatch();
   return (
     <Layout>
       <Header
