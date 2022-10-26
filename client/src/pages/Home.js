@@ -63,13 +63,10 @@ const Home = () => {
           return {
             label: `${label}`,
             key: id,
-            onTabClick: function (id, onClick) {
-              dispatch(getPokemonsStrongTo(label));
-            },
             children: (
               <>
                 <Filter />
-                <PokemonsList filterText={filterText} />
+                <PokemonsList filterText={filterText} label={label} />
                 <Figth />
               </>
             ),

@@ -7,6 +7,7 @@ const {
   fetchPokemonsWeakTo,
   fetchPokemonsStrongTo,
   fetchPokemonsByType,
+  pokemonsFigth,
 } = require("../controllers/pokemons-controller");
 
 //  http://localhost:5005/pokemons
@@ -28,5 +29,9 @@ Router.get("/strong/:typeName", fetchPokemonsStrongTo);
 //  http://localhost:5005/pokemons/:pokemonName
 // return pokemon by name
 Router.get("/:pokemonName", fetchPokemonByName);
+
+//  http://localhost:5005/pokemons/:pokemonName
+// return pokemon by name
+Router.post("/figth", pokemonsFigth);
 
 module.exports = Router;
